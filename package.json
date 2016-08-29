@@ -1,0 +1,28 @@
+{
+  "name": "hook-deploy",
+  "version": "0.0.0",
+  "description": "hook",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "pm2 start index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivaxy/hook-deploy.git"
+  },
+  "keywords": [
+    "hook",
+    "git",
+    "deploy"
+  ],
+  "author": "vivaxy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivaxy/hook-deploy/issues"
+  },
+  "homepage": "https://github.com/vivaxy/hook-deploy#readme"
+}
