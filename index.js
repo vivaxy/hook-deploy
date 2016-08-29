@@ -35,6 +35,9 @@ app.use(function * () {
 
     const request = this.request;
     const response = this.response;
+    
+    console.log(`request.path: ${request.path}`);
+    
     if (request.path === HOOK_DEPLOY_PATH) {
 
         const code = yield run;
