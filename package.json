@@ -4,7 +4,8 @@
   "description": "hook",
   "main": "index.js",
   "dependencies": {
-    "koa": "^1.2.1"
+    "koa": "^1.2.1",
+    "koa-bodyparser": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
