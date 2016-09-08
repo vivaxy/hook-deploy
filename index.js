@@ -7,13 +7,15 @@ const koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const child_process = require('child_process');
 
+const validRequest = require('./library/valid');
+const bitbucketConfig = require('./config/bitbucket');
+
 const spawn = child_process.spawn;
 const app = koa();
 
 const PORT = 3000;
 const DATA_EVENT = 'data';
 const CLOSE_EVENT = 'close';
-const HOOK_DEPLOY_PATH = '/hooks/deploy';
 const HOOK_DEPLOY_SCRIPT_FILE = './script/hook-deploy.sh';
 
 const run = (done) => {
@@ -47,7 +49,7 @@ app.use(function * () {
     console.log(`request.query: ${JSON.stringify(request.query)}`);
     console.log(`request.body: ${JSON.stringify(request.body)}`);
 
-    if (request.path === HOOK_DEPLOY_PATH) {
+    if (validRequest(bitbucketConfig, request)) {
 
         const code = yield run;
 
