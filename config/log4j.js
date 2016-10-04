@@ -6,12 +6,14 @@
 module.exports = {
     appenders: [
         {
-            type: 'console'
+            type: 'console',
+            level: 'ALL',
         },
         {
             type: 'file',
-            filename: '/data/logs/hook-deploy/hook-deploy.log',
-            maxLogSize: 20480
+            filename: '/data/logs/hook-deploy/default.log',
+            maxLogSize: 20480,
+            level: 'ALL',
         }
-    ]
+    ],
 };
