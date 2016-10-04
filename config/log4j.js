@@ -10,7 +10,7 @@ module.exports = {
         },
         {
             type: 'file',
-            filename: '/data/logs/cheese.log',
+            filename: '/data/logs/hook-deploy/hook-deploy.log',
             maxLogSize: 20480
         }
     ]
