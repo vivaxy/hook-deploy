@@ -4,14 +4,18 @@
  */
 
 const koa = require('koa');
+const log4js = require('log4js');
 const bodyParser = require('koa-bodyparser');
 const child_process = require('child_process');
 
 const validRequest = require('./library/valid');
 const bitbucketConfig = require('./config/bitbucket');
+const log4jConfig = require('./config/log4j');
 
 const spawn = child_process.spawn;
 const app = koa();
+log4js.configure(log4jConfig);
+const logger = log4js.getLogger();
 
 const PORT = 3000;
 const DATA_EVENT = 'data';
@@ -23,15 +27,15 @@ const run = (done) => {
     const deploy = spawn('sh', [HOOK_DEPLOY_SCRIPT_FILE]);
 
     deploy.stdout.on(DATA_EVENT, (data) => {
-        console.log(`stdout: ${data}`);
+        logger.debug(`stdout: ${data}`);
     });
 
     deploy.stderr.on(DATA_EVENT, (data) => {
-        console.log(`stderr: ${data}`);
+        logger.debug(`stderr: ${data}`);
     });
 
     deploy.on(CLOSE_EVENT, (code) => {
-        console.log(`child process exited with code ${code}`);
+        logger.debug(`child process exited with code ${code}`);
         done(null, code);
     });
 };
@@ -43,11 +47,11 @@ app.use(function * () {
     const request = this.request;
     const response = this.response;
 
-    console.log(`request.path: ${request.path}`);
-    console.log(`request.method: ${request.method}`);
-    console.log(`request.headers: ${JSON.stringify(request.headers)}`);
-    console.log(`request.query: ${JSON.stringify(request.query)}`);
-    console.log(`request.body: ${JSON.stringify(request.body)}`);
+    logger.debug(`request.path: ${request.path}`);
+    logger.debug(`request.method: ${request.method}`);
+    logger.debug(`request.headers: ${JSON.stringify(request.headers)}`);
+    logger.debug(`request.query: ${JSON.stringify(request.query)}`);
+    logger.debug(`request.body: ${JSON.stringify(request.body)}`);
 
     if (validRequest(bitbucketConfig, request)) {
 
