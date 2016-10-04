@@ -9,6 +9,7 @@ const bodyParser = require('koa-bodyparser');
 const child_process = require('child_process');
 
 const validRequest = require('./library/valid');
+const requestStorage = require('./library/request-storage');
 const bitbucketConfig = require('./config/bitbucket');
 const log4jConfig = require('./config/log4j');
 
@@ -16,6 +17,9 @@ const spawn = child_process.spawn;
 const app = koa();
 log4js.configure(log4jConfig);
 const logger = log4js.getLogger();
+const isRetry = requestStorage.isRetry;
+const saveResult = requestStorage.saveResult;
+const getResult = requestStorage.getResult;
 
 const PORT = 3000;
 const DATA_EVENT = 'data';
@@ -55,13 +59,25 @@ app.use(function * () {
 
     if (validRequest(bitbucketConfig, request)) {
 
-        const code = yield run;
+        let code = null;
 
-        if (code === 0) {
-            response.status = 200;
-            response.body = '{}';
+        if (isRetry(request)) {
+            code = getResult();
         } else {
-            response.status = 500;
+            const code = yield run;
+            saveResult(code);
+        }
+
+        switch (code) {
+            case null:
+                break;
+            case 0:
+                response.status = 200;
+                response.body = '{}';
+                break;
+            default:
+                response.status = 500;
+                break;
         }
     }
 
