@@ -61,7 +61,7 @@ app.use(function * () {
 
         let code = null;
 
-        if (isRetry(request)) {
+        if (isRetry(request.body)) {
             code = getResult();
         } else {
             const code = yield run;
