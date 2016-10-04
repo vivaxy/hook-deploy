@@ -3,6 +3,18 @@
  * @author vivaxy
  */
 
+/** 
+ * log levels
+ ALL
+ TRACE
+ DEBUG
+ INFO
+ WARN
+ ERROR
+ FATAL
+ OFF
+ */
+
 module.exports = {
     appenders: [
         {
@@ -13,7 +25,7 @@ module.exports = {
             type: 'file',
             filename: '/data/logs/hook-deploy/default.log',
             maxLogSize: 20480,
-            level: 'ALL',
+            level: 'DEBUG',
         }
     ],
 };

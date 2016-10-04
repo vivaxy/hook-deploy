@@ -31,7 +31,7 @@ const run = (done) => {
     });
 
     deploy.stderr.on(DATA_EVENT, (data) => {
-        logger.debug(`stderr: ${data}`);
+        logger.trace(`stderr: ${data}`);
     });
 
     deploy.on(CLOSE_EVENT, (code) => {
