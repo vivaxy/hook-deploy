@@ -9,11 +9,14 @@ let savedRequest = {};
 let savedResult = null;
 
 const isRetry = (request) => {
+    const isRetryRequest = isSameObject(savedRequest, request);
     // omit duplication
-    if (!isSameObject(savedRequest, request)) {
+    if (!isRetryRequest) {
         savedRequest = JSON.parse(JSON.stringify(request));
         savedResult = null;
+        return false;
     }
+    return isRetryRequest;
 };
 
 const saveResult = (result) => {
