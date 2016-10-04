@@ -3,13 +3,13 @@
  * @author vivaxy
  */
 
-const isSameObject = require('./valid');
+const objectEquals = require('./object-equals');
 
 let savedRequest = {};
 let savedResult = null;
 
 const isRetry = (request) => {
-    const isRetryRequest = isSameObject(savedRequest, request);
+    const isRetryRequest = objectEquals(savedRequest, request);
     // omit duplication
     if (!isRetryRequest) {
         savedRequest = JSON.parse(JSON.stringify(request));
