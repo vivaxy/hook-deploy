@@ -33,7 +33,9 @@ module.exports = function * () {
                 break;
             case 0:
                 response.status = 200;
-                response.body = '{}';
+                response.body = JSON.stringify({
+                    code: code,
+                });
                 break;
             default:
                 response.status = 500;
