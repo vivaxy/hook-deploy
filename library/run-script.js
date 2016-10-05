@@ -11,7 +11,7 @@ const spawn = child_process.spawn;
 
 const DATA_EVENT = 'data';
 const CLOSE_EVENT = 'close';
-const HOOK_DEPLOY_SCRIPT_FILE = '../script/hook-deploy.sh';
+const HOOK_DEPLOY_SCRIPT_FILE = './script/hook-deploy.sh';
 
 module.exports = (done) => {
 
