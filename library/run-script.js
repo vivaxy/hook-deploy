@@ -15,6 +15,8 @@ const HOOK_DEPLOY_SCRIPT_FILE = '../script/hook-deploy.sh';
 
 module.exports = (done) => {
 
+    const beginTime = new Date().getTime();
+
     const deploy = spawn('sh', [HOOK_DEPLOY_SCRIPT_FILE]);
 
     deploy.stdout.on(DATA_EVENT, (data) => {
@@ -26,7 +28,9 @@ module.exports = (done) => {
     });
 
     deploy.on(CLOSE_EVENT, (code) => {
-        logger.debug(`child process exited with code ${code}`);
+        const endTime = new Date().getTime();
+        const cost = endTime - beginTime;
+        logger.info(`script exited with code ${code} in ${cost}ms`);
         done(null, code);
     });
 };
