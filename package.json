@@ -6,7 +6,8 @@
   "dependencies": {
     "koa": "^1.2.1",
     "koa-bodyparser": "^2.2.0",
-    "log4js": "^0.6.38"
+    "log4js": "^0.6.38",
+    "moment": "^2.15.1"
   },
   "devDependencies": {},
   "scripts": {
