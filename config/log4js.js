@@ -3,6 +3,7 @@
  * @author vivaxy
  */
 
+const log4js = require('log4js');
 /**
  * log levels
  * @see https://github.com/nomiddlename/log4js-node/blob/master/lib/levels.js#L54
@@ -23,7 +24,7 @@ module.exports = {
         },
         {
             type: 'logLevelFilter',
-            level: 'DEBUG',
+            level: log4js.levels.DEBUG,
             appender: {
                 type: 'file',
                 filename: '/data/logs/hook-deploy/default.log',
