@@ -26,7 +26,7 @@ module.exports = {
             type: 'logLevelFilter',
             level: log4js.levels.DEBUG,
             appender: {
-                type: 'file',
+                type: 'dateFile',
                 filename: '/data/logs/hook-deploy/default.log',
             }
         }
