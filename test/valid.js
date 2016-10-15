@@ -3,17 +3,21 @@
  * @author vivaxy
  */
 
-const validRequest = require('../library/valid');
+const validRequest = require('../library/valid-request');
 
-console.log(validRequest({
-    a: 1,
-    b: {
-        c: 'd'
-    }
-}, {
-    a: 1,
-    b: {
-        c: 'd',
-        e: 'f'
-    }
-}));
+const request = require('./request.json');
+
+console.log(
+    validRequest(
+        {
+            pullrequest: {
+                state: 'MERGED',
+                destination: {
+                    branch: {
+                        name: 'beta'
+                    }
+                }
+            }
+        },
+        request
+    ));

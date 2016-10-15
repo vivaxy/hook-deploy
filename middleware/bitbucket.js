@@ -14,7 +14,7 @@ const isRetry = requestStorage.isRetry;
 const saveResult = requestStorage.saveResult;
 const getResult = requestStorage.getResult;
 
-module.exports = function * () {
+module.exports = function *(next) {
 
     const request = this.request;
     const response = this.response;
@@ -43,6 +43,8 @@ module.exports = function * () {
                 response.status = 500;
                 break;
         }
+    } else {
+        yield next;
     }
 
 };

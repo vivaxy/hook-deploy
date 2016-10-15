@@ -1,0 +1,230 @@
+{
+    "repository": {
+        "full_name": "h-c/h-c-web",
+        "owner": {
+            "username": "h-c",
+            "uuid": "{285e222d-72b1-41bd-8f93-03f8a3929198}",
+            "type": "team",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/account/h-c/avatar/32/"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/teams/h-c"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/h-c/"
+                }
+            },
+            "display_name": "nayi"
+        },
+        "links": {
+            "avatar": {
+                "href": "https://bitbucket.org/h-c/h-c-web/avatar/32/"
+            },
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web"
+            },
+            "html": {
+                "href": "https://bitbucket.org/h-c/h-c-web"
+            }
+        },
+        "website": "",
+        "is_private": true,
+        "scm": "git",
+        "uuid": "{d34c7842-ed26-41e3-b939-629650182e1a}",
+        "project": {
+            "key": "HCSER",
+            "uuid": "{53e967cf-3860-4427-a374-93f01fe2cf54}",
+            "name": "HcServer",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/account/user/h-c/projects/HCSER/avatar/32"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/teams/h-c/projects/HCSER"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/account/user/h-c/projects/HCSER"
+                }
+            },
+            "type": "project"
+        },
+        "name": "h-c-web",
+        "type": "repository"
+    },
+    "actor": {
+        "username": "Snaplu",
+        "uuid": "{9108e837-5cbd-439d-907f-531046d68e58}",
+        "type": "user",
+        "links": {
+            "avatar": {
+                "href": "https://bitbucket.org/account/Snaplu/avatar/32/"
+            },
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/users/Snaplu"
+            },
+            "html": {
+                "href": "https://bitbucket.org/Snaplu/"
+            }
+        },
+        "display_name": "Dongjie Lu"
+    },
+    "pullrequest": {
+        "state": "MERGED",
+        "author": {
+            "username": "Snaplu",
+            "uuid": "{9108e837-5cbd-439d-907f-531046d68e58}",
+            "type": "user",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/account/Snaplu/avatar/32/"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/Snaplu"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/Snaplu/"
+                }
+            },
+            "display_name": "Dongjie Lu"
+        },
+        "comment_count": 0,
+        "title": "finish resetPassword adjustment",
+        "source": {
+            "commit": {
+                "hash": "fa42f461e1b0",
+                "links": {
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web/commit/fa42f461e1b0"
+                    }
+                }
+            },
+            "repository": {
+                "full_name": "h-c/h-c-web",
+                "uuid": "{d34c7842-ed26-41e3-b939-629650182e1a}",
+                "type": "repository",
+                "name": "h-c-web",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/h-c/h-c-web/avatar/32/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/h-c/h-c-web"
+                    }
+                }
+            },
+            "branch": {
+                "name": "mobile"
+            }
+        },
+        "closed_by": {
+            "username": "Snaplu",
+            "uuid": "{9108e837-5cbd-439d-907f-531046d68e58}",
+            "type": "user",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket.org/account/Snaplu/avatar/32/"
+                },
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/Snaplu"
+                },
+                "html": {
+                    "href": "https://bitbucket.org/Snaplu/"
+                }
+            },
+            "display_name": "Dongjie Lu"
+        },
+        "merge_commit": {
+            "hash": "e11d66119def",
+            "links": {
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web/commit/e11d66119def"
+                }
+            }
+        },
+        "type": "pullrequest",
+        "created_on": "2016-10-15T08:39:35.774227+00:00",
+        "updated_on": "2016-10-15T08:39:48.893754+00:00",
+        "links": {
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web/pullrequests/138"
+            },
+            "html": {
+                "href": "https://bitbucket.org/h-c/h-c-web/pull-requests/138"
+            }
+        },
+        "id": 138,
+        "task_count": 0,
+        "participants": [
+            {
+                "user": {
+                    "username": "vivaxy",
+                    "uuid": "{4b89c55b-29b8-4f3c-bb39-1265a38404ec}",
+                    "type": "user",
+                    "links": {
+                        "avatar": {
+                            "href": "https://bitbucket.org/account/vivaxy/avatar/32/"
+                        },
+                        "self": {
+                            "href": "https://api.bitbucket.org/2.0/users/vivaxy"
+                        },
+                        "html": {
+                            "href": "https://bitbucket.org/vivaxy/"
+                        }
+                    },
+                    "display_name": "vivaxy"
+                },
+                "type": "participant",
+                "approved": false,
+                "role": "REVIEWER"
+            }
+        ],
+        "destination": {
+
+            "repository": {
+                "full_name": "h-c/h-c-web",
+                "uuid": "{d34c7842-ed26-41e3-b939-629650182e1a}",
+                "type": "repository",
+                "name": "h-c-web",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/h-c/h-c-web/avatar/32/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/repositories/h-c/h-c-web"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/h-c/h-c-web"
+                    }
+                }
+            },
+            "branch": {
+                "name": "beta"
+            }
+        },
+        "reviewers": [
+            {
+                "username": "vivaxy",
+                "uuid": "{4b89c55b-29b8-4f3c-bb39-1265a38404ec}",
+                "type": "user",
+                "links": {
+                    "avatar": {
+                        "href": "https://bitbucket.org/account/vivaxy/avatar/32/"
+                    },
+                    "self": {
+                        "href": "https://api.bitbucket.org/2.0/users/vivaxy"
+                    },
+                    "html": {
+                        "href": "https://bitbucket.org/vivaxy/"
+                    }
+                },
+                "display_name": "vivaxy"
+            }
+        ],
+        "reason": ""
+    }
+}
