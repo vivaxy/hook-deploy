@@ -8,6 +8,8 @@ const requestStorage = require('../library/request-storage');
 const bitbucketConfig = require('../config/bitbucket');
 const runScript = require('../library/run-script');
 
+const script = './script/bitbucket.sh';
+
 const isRetry = requestStorage.isRetry;
 const saveResult = requestStorage.saveResult;
 const getResult = requestStorage.getResult;
@@ -24,7 +26,7 @@ module.exports = function * () {
         if (isRetry(request.body)) {
             code = getResult();
         } else {
-            const code = yield runScript;
+            const code = yield runScript(script);
             saveResult(code);
         }
 
