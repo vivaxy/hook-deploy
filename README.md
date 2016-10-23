@@ -4,7 +4,7 @@ git hook to deploy
 
 # setup
 `sudo npm install pm2 -g`
-`npm run start`
+`npm start`
 
 # update
 
@@ -18,4 +18,6 @@ git hook to deploy
 
 `pm2 kill`
 
-# 
+# logs
+
+`pm2 logs`
