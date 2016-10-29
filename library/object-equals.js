@@ -13,7 +13,7 @@ const objectEquals = (base, target) => {
     }
 
     return baseKeyList.every((key) => {
-        if (typeof base[key] === 'object') {
+        if (base[key] && typeof base[key] === 'object') {
             // array or object
             return objectEquals(base[key], target[key]);
         } else {
