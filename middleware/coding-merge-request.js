@@ -4,15 +4,10 @@
  */
 
 const validRequest = require('../library/valid-request');
-const requestStorage = require('../library/request-storage');
 const requestConfig = require('../config/coding-merge-request');
 const runScript = require('../library/run-script');
 
 const script = './scripts/coding.sh';
-
-const isRetry = requestStorage.isRetry;
-const saveResult = requestStorage.saveResult;
-const getResult = requestStorage.getResult;
 
 module.exports = function *(next) {
 
@@ -20,29 +15,9 @@ module.exports = function *(next) {
     const response = this.response;
 
     if (validRequest(requestConfig, request)) {
-
-        let code = null;
-
-        if (isRetry(request.body)) {
-            code = getResult();
-        } else {
-            const code = yield runScript(script);
-            saveResult(code);
-        }
-
-        switch (code) {
-            case null:
-                break;
-            case 0:
-                response.status = 200;
-                response.body = JSON.stringify({
-                    code: code,
-                });
-                break;
-            default:
-                response.status = 500;
-                break;
-        }
+        runScript(script)((err, code) => {
+        });
+        response.status = 200;
     } else {
         yield next;
     }
