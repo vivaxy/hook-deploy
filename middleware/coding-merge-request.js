@@ -5,10 +5,10 @@
 
 const validRequest = require('../library/valid-request');
 const requestStorage = require('../library/request-storage');
-const codingConfig = require('../config/coding');
+const requestConfig = require('../config/coding-merge-request');
 const runScript = require('../library/run-script');
 
-const script = './script/coding.sh';
+const script = './scripts/coding.sh';
 
 const isRetry = requestStorage.isRetry;
 const saveResult = requestStorage.saveResult;
@@ -19,7 +19,7 @@ module.exports = function *(next) {
     const request = this.request;
     const response = this.response;
 
-    if (validRequest(codingConfig, request)) {
+    if (validRequest(requestConfig, request)) {
 
         let code = null;
 

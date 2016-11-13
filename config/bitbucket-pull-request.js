@@ -4,7 +4,6 @@
  */
 
 module.exports = {
-    path: '/hooks/deploy',
     method: 'POST',
     headers: {
         'user-agent': 'Bitbucket-Webhooks/2.0',

@@ -5,10 +5,10 @@
 
 const validRequest = require('../library/valid-request');
 const requestStorage = require('../library/request-storage');
-const bitbucketConfig = require('../config/bitbucket');
+const requestConfig = require('../config/bitbucket-pull-request');
 const runScript = require('../library/run-script');
 
-const script = './script/bitbucket.sh';
+const script = './scripts/bitbucket.sh';
 
 const isRetry = requestStorage.isRetry;
 const saveResult = requestStorage.saveResult;
@@ -19,7 +19,7 @@ module.exports = function *(next) {
     const request = this.request;
     const response = this.response;
 
-    if (validRequest(bitbucketConfig, request)) {
+    if (validRequest(requestConfig, request)) {
 
         let code = null;
 
