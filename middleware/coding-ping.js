@@ -12,7 +12,7 @@ module.exports = function *(next) {
     const response = this.response;
 
     if (validRequest(requestConfig, request)) {
-        response.status = 500;
+        response.status = 200;
     } else {
         yield next;
     }
