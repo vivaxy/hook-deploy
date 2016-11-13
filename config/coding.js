@@ -13,7 +13,7 @@ module.exports = {
     body: {
         merge_request: {
             target_branch: 'master',
-            status: 'MERGED',
+            status: 'ACCEPTED',
         },
         event: 'merge_request',
     },
