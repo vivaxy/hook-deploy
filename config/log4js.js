@@ -4,6 +4,9 @@
  */
 
 const log4js = require('log4js');
+
+const pkg = require('../package.json');
+
 /**
  * log levels
  * @see https://github.com/nomiddlename/log4js-node/blob/master/lib/levels.js#L54
@@ -27,7 +30,7 @@ module.exports = {
             level: log4js.levels.ALL,
             appender: {
                 type: 'dateFile',
-                filename: '/data/logs/hook-deploy/default.log',
+                filename: `/data/logs/${pkg.name}/default.log`,
             }
         }
     ],
