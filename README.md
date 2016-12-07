@@ -2,22 +2,28 @@
 
 git hook to deploy
 
-# setup
+# Setup
+
 `sudo npm install pm2 -g`
+
 `npm start`
 
-# update
+# Change log
+
+[Change log](CHANGELOG.md)
+
+# Cheat sheet
 
 `pm2 update`
 
-# ls
+### ls
 
 `pm2 ls`
 
-# kill
+### kill
 
 `pm2 kill`
 
-# logs
+### logs
 
 `pm2 logs`

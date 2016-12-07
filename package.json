@@ -10,9 +10,12 @@
     "log4js": "^0.6.38",
     "moment": "^2.15.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard-version": "^4.0.0"
+  },
   "scripts": {
-    "start": "pm2 start index.js"
+    "start": "pm2 start index.js",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
