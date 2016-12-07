@@ -3,9 +3,12 @@
  * @author vivaxy
  */
 
+const fse = require('fs-extra');
 const log4js = require('log4js');
 
 const log4jsConfig = require('../config/log4js');
+
+fse.ensureFileSync(log4jsConfig.logFile);
 
 log4js.configure(log4jsConfig);
 
