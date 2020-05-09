@@ -4,7 +4,7 @@
   "description": "hook",
   "main": "index.js",
   "dependencies": {
-    "fs-extra": "^1.0.0",
+    "fs-extra": "^9.0.0",
     "koa": "^1.2.1",
     "koa-bodyparser": "^2.2.0",
     "log4js": "^0.6.38",
