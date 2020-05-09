@@ -6,7 +6,7 @@
   "dependencies": {
     "fs-extra": "^9.0.0",
     "koa": "^1.2.1",
-    "koa-bodyparser": "^2.2.0",
+    "koa-bodyparser": "^4.0.0",
     "log4js": "^6.0.0",
     "moment": "^2.15.1"
   },
